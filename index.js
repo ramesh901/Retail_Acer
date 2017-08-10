@@ -1,5 +1,5 @@
 var mongodb = require('mongodb');
-var uri = 'mongodb://localhose:27017/example';
+var uri = 'mongodb://localhost:27017/example';
 
 mongodb.MongoClient.connect(uri,function(error,db) {
 	if(error){
@@ -11,7 +11,7 @@ mongodb.MongoClient.connect(uri,function(error,db) {
 		title: 'jaws',
 		director: 'steven',
 		year: 1975,
-		rating: PG
+		rating: 'PG'
 	};
 
 	db.collection('movies').insert(doc,function(error, result){
@@ -34,4 +34,3 @@ mongodb.MongoClient.connect(uri,function(error,db) {
 	})
 	})
 })
-
